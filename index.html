@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CodePen - A Pen by Kenny Nguyen</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxeScape | Modern Landscaping</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #2d4a22;
+      --accent: #c5a059;
+      --glass: rgba(255, 255, 255, 0.1);
+      --dark: #121212;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* Modern Glass Header */
+    header {
+      position: fixed;
+      width: 100%;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: rgba(18, 18, 18, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 300;
+      transition: 0.3s;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent),
+        url('https://images.unsplash.com/photo-1558905734-b8303352750e?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 0 10%;
+    }
+
+    .hero-content h1 {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      max-width: 500px;
+      margin-bottom: 40px;
+      color: #ccc;
+    }
+
+    /* High-End Buttons */
+    .btn {
+      padding: 18px 40px;
+      background: var(--accent);
+      color: var(--dark);
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.4s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: white;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Grid for "Our Work" */
+    section {
+      padding: 100px 10%;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+
+    .section-title span {
+      color: var(--accent);
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .work-item {
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 5px;
+      filter: grayscale(40%);
+      transition: 0.5s;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .work-item:hover {
+      filter: grayscale(0%);
+      transform: scale(1.02);
+    }
+
+    /* About & Location Glass Card */
+    .info-card {
+      background: var(--glass);
+      backdrop-filter: blur(15px);
+      padding: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      display: flex;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .info-box {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    /* Contact/Booking Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      color: white;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">LUXESCAPE<span>.</span></div>
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#work">PROJECTS</a>
+      <a href="#location">LOCATION</a>
+      <a href="#book" class="btn" style="padding: 10px 20px; margin-left: 20px;">BOOK CONSULT</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Nature,<br><span style="color:var(--accent)">Redefined.</span></h1>
+      <p>Architectural landscaping for the modern estate. We turn outdoor spaces into private sanctuaries.</p>
+      <a href="#work" class="btn">Explore Portfolio</a>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <div class="work-grid">
+      <div class="work-item" style="background-image: url('https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&q=80');">
+        <h3>Modern Infinity</h3>
+      </div>
+      <div class="work-item" style="background-image: url('https://images.unsplash.com/photo-1510137600163-2729bc6959a6?auto=format&fit=crop&w=600&q=80');">
+        <h3>Desert Minimalist</h3>
+      </div>
+      <div class="work-item" style="background-image: url('https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?auto=format&fit=crop&w=600&q=80');">
+        <h3>English Garden 2.0</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="info-card">
+      <div class="info-box">
+        <h2 style="color:var(--accent); margin-bottom: 20px;">Our Vision</h2>
+        <p>Based in <strong>Beverly Hills, CA</strong>, we specialize in high-end residential landscapes. Our team blends horticulture with structural engineering to create art you can live in.</p>
+      </div>
+      <div id="book" class="info-box">
+        <h2 style="margin-bottom: 20px;">Book a Design Audit</h2>
+        <form>
+          <input type="text" placeholder="Full Name">
+          <input type="email" placeholder="Email Address">
+          <textarea placeholder="Tell us about your project..."></textarea>
+          <button type="button" class="btn" onclick="alert('Demo Mode: In the live version, this will send a lead to your email!')">Secure Date</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer style="text-align: center; padding: 50px; color: #555; font-size: 0.8rem;">
+    &copy; 2026 LUXESCAPE LANDSCAPING. ALL RIGHTS RESERVED.
+  </footer>
+
+</body>
+
+</html>
+    
+  </body>
+  
+</html>
